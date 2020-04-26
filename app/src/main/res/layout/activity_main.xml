@@ -11,12 +11,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="0"
-        android:textSize="40dp" />
+        android:text="@string/initial_number"
+        android:textSize="80sp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="60sp"
         android:text="@string/increase"
         android:onClick="increment"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="60sp"
+        android:text="@string/decrease"
+        android:onClick="decrement"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="60sp"
+        android:text="@string/zero"
+        android:onClick="setZero"/>
 </LinearLayout>
