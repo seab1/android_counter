@@ -5,4 +5,7 @@
     <string name="decrease">Zmniejsz</string>
     <string name="zero">Zeruj</string>
     <string name="insert_value">Wprowadź wartość</string>
+
+    <string name="user_text_edit">Wpisz liczbę całkowitą</string>
+    <string name="button_send">Wyślij</string>
 </resources>
