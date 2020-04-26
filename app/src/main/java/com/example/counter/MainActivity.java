@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view)
     {
         counter++;
-        TextView textView = (TextView) findViewById(R.id.counter_number);
+        TextView textView = (TextView) findViewById(R.id.viewed_number);
         String counterRepresentant = String.valueOf(counter);
         textView.setText(counterRepresentant);
     }
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view)
     {
         counter--;
-        TextView textView = (TextView) findViewById(R.id.counter_number);
+        TextView textView = (TextView) findViewById(R.id.viewed_number);
         String counterRepresentant = String.valueOf(counter);
         textView.setText(counterRepresentant);
     }
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void setZero(View view)
     {
         counter = 0;
-        TextView textView = (TextView) findViewById(R.id.counter_number);
+        TextView textView = (TextView) findViewById(R.id.viewed_number);
         String counterRepresentant = String.valueOf(counter);
         textView.setText(counterRepresentant);
     }
@@ -46,5 +46,22 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this, UserValueInsertion.class);
         startActivityForResult(intent, USER_VALUE_REQUEST_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == USER_VALUE_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+
+                String userValue = data.getStringExtra("user_value");
+                this.counter = Integer.parseInt(userValue);
+
+                TextView textView = (TextView) findViewById(R.id.viewed_number);
+                textView.setText(userValue);
+            }
+        }
     }
 }

@@ -2,8 +2,10 @@ package com.example.counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class UserValueInsertion extends AppCompatActivity {
 
@@ -15,6 +17,12 @@ public class UserValueInsertion extends AppCompatActivity {
 
     public void sendValue(View view)
     {
+        EditText editText = (EditText) findViewById(R.id.value_field);
+        String userValue = editText.getText().toString();
 
+        Intent intent = new Intent();
+        intent.putExtra("user_value", userValue);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 }
