@@ -23,4 +23,20 @@ public class MainActivity extends AppCompatActivity {
         String counterRepresentant = String.valueOf(counter);
         textView.setText(counterRepresentant);
     }
+
+    public void decrement(View view)
+    {
+        counter--;
+        TextView textView = (TextView) findViewById(R.id.counter_number);
+        String counterRepresentant = String.valueOf(counter);
+        textView.setText(counterRepresentant);
+    }
+
+    public void setZero(View view)
+    {
+        counter = 0;
+        TextView textView = (TextView) findViewById(R.id.counter_number);
+        String counterRepresentant = String.valueOf(counter);
+        textView.setText(counterRepresentant);
+    }
 }

@@ -2,4 +2,5 @@
     <string name="app_name">Counter</string>
     <string name="increase">Zwiększ</string>
     <string name="decrease">Zmniejsz</string>
+    <string name="zero">Zeruj</string>
 </resources>
