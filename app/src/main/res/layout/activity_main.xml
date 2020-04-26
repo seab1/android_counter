@@ -18,7 +18,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
         android:textSize="60sp"
         android:text="@string/increase"
         android:onClick="increment"/>
@@ -27,7 +26,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
         android:textSize="60sp"
         android:text="@string/decrease"
         android:onClick="decrement"/>
@@ -36,8 +34,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
         android:textSize="60sp"
         android:text="@string/zero"
         android:onClick="setZero"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="60sp"
+        android:text="@string/insert_value"
+        android:onClick="enableUserInsert"/>
 </LinearLayout>

@@ -4,4 +4,5 @@
     <string name="increase">Zwiększ</string>
     <string name="decrease">Zmniejsz</string>
     <string name="zero">Zeruj</string>
+    <string name="insert_value">Wprowadź wartość</string>
 </resources>

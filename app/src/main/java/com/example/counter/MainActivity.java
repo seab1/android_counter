@@ -39,4 +39,9 @@ public class MainActivity extends AppCompatActivity {
         String counterRepresentant = String.valueOf(counter);
         textView.setText(counterRepresentant);
     }
+
+    public void enableUserInsert(View view)
+    {
+
+    }
 }
