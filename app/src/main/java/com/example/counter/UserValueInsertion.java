@@ -19,10 +19,20 @@ public class UserValueInsertion extends AppCompatActivity {
     {
         EditText editText = (EditText) findViewById(R.id.value_field);
         String userValue = editText.getText().toString();
-
         Intent intent = new Intent();
-        intent.putExtra("user_value", userValue);
-        setResult(RESULT_OK, intent);
-        finish();
+
+        try
+        {
+            userValue = String.valueOf(Integer.parseInt(userValue));
+            intent.putExtra("user_value", userValue);
+            setResult(RESULT_OK, intent);
+            finish();
+        }
+        catch(Exception e)
+        {
+            intent.putExtra("user_value", "0");
+            setResult(RESULT_OK, intent);
+            finish();
+        }
     }
 }
